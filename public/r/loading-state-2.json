@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "loading-state-2",
+  "type": "registry:component",
+  "title": "Loading State 2",
+  "author": "Sahi Fruitwala",
+  "description": "A year progress component",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/blocks/loading-states/loading-state-2.tsx",
+      "content": "// DocumentScannerLoading.tsx\nimport React from \"react\";\nimport { motion } from \"framer-motion\";\n\nconst cols = 40;\nconst rows = 60;\nconst total = cols * rows;\n\nexport function Loading2() {\n  return (\n    <div className=\"flex items-center justify-center h-screen bg-black\">\n      <div className=\"relative w-60 h-80\">\n        {[...Array(total)].map((_, i) => {\n          const x = i % cols;\n          const y = Math.floor(i / cols);\n          const delay = y * 0.1; // slower scan top to bottom\n          return (\n            <motion.div\n              key={i}\n              initial={{ opacity: 0.2, scale: 0.5 }}\n              animate={{ opacity: [0.2, 1, 0.2], scale: [0.5, 1, 0.5] }}\n              transition={{\n                duration: 2.5,\n                repeat: Infinity,\n                delay,\n                ease: \"easeInOut\",\n              }}\n              className=\"absolute bg-white rounded-full\"\n              style={{\n                width: \"3px\",\n                height: \"3px\",\n                left: `${x * 6}px`,\n                top: `${y * 6}px`,\n              }}\n            />\n          );\n        })}\n        {/* Optional: visual scanning beam */}\n        <motion.div\n          className=\"absolute left-0 w-full h-1 bg-blue-500/20\"\n          animate={{ top: [\"0%\", \"100%\"] }}\n          transition={{ duration: 4, repeat: Infinity, ease: \"linear\" }}\n        />\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

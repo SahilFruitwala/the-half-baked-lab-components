@@ -1,10 +1,8 @@
 import * as React from "react"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
-import { HelloWorld } from "@/registry/new-york/blocks/hello-world/hello-world"
 import { YearProgress } from "@/registry/new-york/blocks/year-progress/year-progress"
 import { ModeToggle } from "@/components/mode-toggle"
-// This page displays items from the custom registry.
-// You are free to implement this with your own design as needed.
+import { Loading1 } from "@/registry/new-york/blocks/loading-states/loading-state-1"
 
 export default function Home() {
   return (
@@ -22,24 +20,23 @@ export default function Home() {
         <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
           <div className="flex items-center justify-between">
             <h2 className="text-sm text-muted-foreground sm:pl-3">
-              A simple hello world component
-            </h2>
-            <OpenInV0Button name="hello-world" className="w-fit" />
-          </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
-            <HelloWorld />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3">
               Year Progress Component
             </h2>
-            <OpenInV0Button name="example-form" className="w-fit" />
+            <OpenInV0Button name="year-progress" className="w-fit" />
           </div>
           <div className="flex items-center justify-center min-h-[500px] relative">
             <YearProgress />
+          </div>
+        </div>
+        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-muted-foreground sm:pl-3">
+              Loading State 1
+            </h2>
+            <OpenInV0Button name="year-progress" className="w-fit" />
+          </div>
+          <div className="flex items-center justify-center min-h-[500px] relative">
+            <Loading1 />
           </div>
         </div>
       </main>

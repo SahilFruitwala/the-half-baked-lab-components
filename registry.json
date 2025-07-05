@@ -4,19 +4,6 @@
   "homepage": "https://ui.thehalfbakedlab.com",
   "items": [
     {
-      "name": "hello-world",
-      "type": "registry:component",
-      "title": "Hello World",
-      "description": "A simple hello world component",
-      "registryDependencies": ["button"],
-      "files": [
-        {
-          "path": "registry/new-york/blocks/hello-world/hello-world.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "year-progress",
       "type": "registry:component",
       "title": "Year Progress",
@@ -26,6 +13,48 @@
       "files": [
         {
           "path": "registry/new-york/blocks/year-progress/year-progress.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "loading-state-1",
+      "type": "registry:component",
+      "title": "Loading State 1",
+      "description": "A year progress component",
+      "author": "Sahi Fruitwala",
+      "devDependencies": ["framer-motion"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/loading-states/loading-state-1.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "loading-state-2",
+      "type": "registry:component",
+      "title": "Loading State 2",
+      "description": "A year progress component",
+      "author": "Sahi Fruitwala",
+      "dependencies": ["framer-motion"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/loading-states/loading-state-2.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "loading-state-3",
+      "type": "registry:component",
+      "title": "Loading State 3",
+      "description": "A year progress component",
+      "author": "Sahi Fruitwala",
+      "dependencies": ["framer-motion"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/loading-states/loading-state-3.tsx",
           "type": "registry:component"
         }
       ]
